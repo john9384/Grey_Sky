@@ -1,0 +1,27 @@
+.sec-abt {
+	background-color: $color-light;
+	padding: 25rem 0;
+	margin-top: -20vh;
+}
+
+.sec-features {
+	padding: 20rem 0;
+	background-image: linear-gradient(
+			to right bottom,
+			rgba(0, 0, 0, 0.9),
+			rgba(128, 128, 128, 0.8),
+			rgba(0, 0, 0, 0.8)
+		),
+		url("../img/2018-03-05\ 16.19.37.png");
+	background-size: 100% 100%;
+	transform: skewY(-7deg);
+	& > * {
+		transform: skewY(7deg);
+	}
+	margin-top: -10vh;
+}
+.sec-services {
+	background-color: $color-light;
+	padding: 25rem 0 50rem 0;
+	margin-top: -15vh;
+}
