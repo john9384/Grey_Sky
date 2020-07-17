@@ -26,6 +26,15 @@
 			background-color: $color-light;
 		}
 	}
+	&--grey {
+		background-color: $color-pry;
+		color: $color-white;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+		margin: 2rem;
+		&::after {
+			background-color: $color-light;
+		}
+	}
 	&::after {
 		content: "";
 		display: inline-block;

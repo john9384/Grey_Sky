@@ -56,6 +56,8 @@
 		background-blend-mode: exclusion;
 		-webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
 		clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+		border-top-left-radius: 3px;
+		border-top-right-radius: 3px;
 		&--1 {
 			background-image: linear-gradient(to right, $color-pry, $color-black),
 				url("../img/glenn-carstens-peters-RLw-UC03Gwc-unsplash.jpg");
@@ -106,9 +108,25 @@
 		}
 	}
 	&__action {
+		color: $color-white;
 		position: absolute;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		text-align: center;
+		&--price-info {
+			margin-bottom: 8rem;
+		}
+		&--text {
+			font-size: 1.4rem;
+			text-transform: uppercase;
+		}
+		&--price {
+			font-size: 6rem;
+			font-weight: 100;
+		}
+	}
+	.btn--light {
+		margin-left: 1rem;
 	}
 }
