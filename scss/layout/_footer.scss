@@ -1,0 +1,38 @@
+.footer {
+	background-color: $color-grey-black;
+	color: white;
+	padding: 10rem 0;
+	font-size: 1.4rem;
+
+	&__list {
+		font-size: 2rem;
+		text-transform: uppercase;
+	}
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+	&__link {
+		&:link,
+		&:visited {
+			color: $color-light-grey;
+			text-decoration: none;
+		}
+		&:hover,
+		&:active {
+			color: $color-white;
+			text-shadow: 0.5rem 0.5rem 0.5rem rgba($color-white, 0.2);
+			transform: rotate(2deg) scale(1.05);
+		}
+	}
+	&__copyright {
+		border-top: 1px solid $color-light-grey;
+		padding-top: 2rem;
+		font-size: 1.6rem;
+		margin-top: 4rem;
+		color: $color-light-grey;
+		width: 80%;
+		float: right;
+	}
+}

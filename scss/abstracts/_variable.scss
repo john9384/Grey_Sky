@@ -3,10 +3,16 @@ $color-black: black;
 $color-black-8: rgba(black, 0.8);
 $color-white: white;
 $color-pry: grey;
+$color-light-grey: rgb(156, 146, 146);
+$color-dark-grey: rgb(54, 53, 53);
+$color-grey-black: rgb(41, 36, 36);
 $color-light: whitesmoke;
 $color-box-shadow: 2px 10px 40px rgba(black, 0.2);
 $color-btn-shadow: 1px 1px 10px 3px rgba(black, 0.2);
 $color-text-shadow: 5px 10px 20px rgba(black, 0.2);
+$color-success: rgb(9, 114, 9);
+$color-error: rgb(128, 8, 8);
+$color-alert: rgb(177, 117, 6);
 
 // Font variables
 $font-size-default: 1.6rem;

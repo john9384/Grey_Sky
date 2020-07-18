@@ -1,4 +1,5 @@
 .btn {
+	&,
 	&:link,
 	&:visited {
 		text-transform: uppercase;
@@ -7,12 +8,15 @@
 		display: inline-block;
 		transition: all 0.2s;
 		position: relative;
+		border: none;
+		cursor: pointer;
 	}
 	&:hover {
 		transform: translateY(-0.3px);
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 	}
-	&:active {
+	&:active,
+	&:focus {
 		transform: translateY(-1px);
 		box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 	}
@@ -49,6 +53,11 @@
 	&:hover::after {
 		transform: scalex(1.4) scaleY(1.6);
 		opacity: 0;
+	}
+	&--dark-grey {
+		background-color: $color-dark-grey;
+		color: white;
+		font-family: inherit;
 	}
 }
 

@@ -29,3 +29,25 @@
 	padding: 15rem 0;
 	position: relative;
 }
+.sec-booking {
+	padding: 15rem 0;
+	background-image: linear-gradient(to right top, $color-pry, $color-black);
+}
+.booking {
+	background-image: linear-gradient(
+			105deg,
+			rgba($color-white, 0.8) 0%,
+			rgba($color-white, 0.8) 50%,
+			transparent 50%
+		),
+		url("../img/nathan-anderson-179449-unsplash.jpg");
+	background-size: 100% 100%;
+	border-radius: 3px;
+	box-shadow: 0 1.5rem 4rem rgba($color-white, 0.1);
+	overflow: hidden;
+	height: 50rem;
+	&__form {
+		width: 50%;
+		padding: 6rem;
+	}
+}

@@ -71,6 +71,7 @@ body {
   font-weight: 700;
   display: inline-block;
   background-image: linear-gradient(to right, grey, black, grey);
+  -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   transition: all 0.2s; }
@@ -110,19 +111,21 @@ body {
 .u-margin-bottom-small {
   margin-bottom: 1.5rem; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 3rem;
   display: inline-block;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-0.3px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); }
 
-.btn:active {
+.btn:active, .btn:focus {
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); }
 
@@ -157,6 +160,11 @@ body {
 .btn:hover::after {
   transform: scalex(1.4) scaleY(1.6);
   opacity: 0; }
+
+.btn--dark-grey {
+  background-color: #363535;
+  color: white;
+  font-family: inherit; }
 
 .btn-text:link, .btn-text:visited {
   color: rgba(0, 0, 0, 0.8);
@@ -319,7 +327,8 @@ body {
   width: 100%;
   height: 100%;
   z-index: -1;
-  opacity: 0.3; }
+  opacity: 0.3;
+  overflow: hidden; }
   .bg-video__content {
     height: 100%;
     width: 100%;
@@ -362,10 +371,86 @@ body {
     font-size: 6rem;
     margin-bottom: 0.5rem;
     background-image: linear-gradient(to right, grey, black, grey);
+    -webkit-background-clip: text;
     background-clip: text;
     color: transparent; }
   .feat-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
+
+.form__input {
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-family: inherit;
+  border-bottom: 3px solid transparent;
+  width: 85%;
+  display: block;
+  transition: all 0.5s; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #097209; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #b17506; }
+  .form__input::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.6); }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.5s; }
+
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__group-radio {
+  width: 48%;
+  display: inline-block; }
+
+.form__radio-btn {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4.5rem; }
+
+.form__radio-span {
+  height: 3rem;
+  width: 3rem;
+  border: 5px solid grey;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -7px; }
+  .form__radio-span::after {
+    content: "";
+    display: block;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: grey;
+    opacity: 0;
+    transition: opacity 0.2s; }
+
+.form__radio-btn:checked ~ .form__radio-label .form__radio-span::after {
+  opacity: 1; }
 
 .header {
   height: 95vh;
@@ -403,6 +488,32 @@ body {
 .logo__ky {
   font-size: 1.6rem; }
 
+.footer {
+  background-color: #292424;
+  color: white;
+  padding: 10rem 0;
+  font-size: 1.4rem; }
+  .footer__list {
+    font-size: 2rem;
+    text-transform: uppercase; }
+  .footer__item:not(:last-child) {
+    margin-bottom: 1rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #9c9292;
+    text-decoration: none; }
+  .footer__link:hover, .footer__link:active {
+    color: white;
+    text-shadow: 0.5rem 0.5rem 0.5rem rgba(255, 255, 255, 0.2);
+    transform: rotate(2deg) scale(1.05); }
+  .footer__copyright {
+    border-top: 1px solid #9c9292;
+    padding-top: 2rem;
+    font-size: 1.6rem;
+    margin-top: 4rem;
+    color: #9c9292;
+    width: 80%;
+    float: right; }
+
 .sec-abt {
   background-color: whitesmoke;
   padding: 25rem 0;
@@ -425,6 +536,21 @@ body {
 .sec-stories {
   padding: 15rem 0;
   position: relative; }
+
+.sec-booking {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right top, grey, black); }
+
+.booking {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url("../img/nathan-anderson-179449-unsplash.jpg");
+  background-size: 100% 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+  height: 50rem; }
+  .booking__form {
+    width: 50%;
+    padding: 6rem; }
 
 .row {
   max-width: 114rem;
