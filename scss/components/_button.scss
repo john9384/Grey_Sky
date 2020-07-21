@@ -29,6 +29,12 @@
 		&::after {
 			background-color: $color-light;
 		}
+		@include resolution(tab-portrait) {
+			margin: 2rem 0 0 -3rem;
+		}
+		@include resolution(phone) {
+			margin: 2rem 0 0 -2.5rem;
+		}
 	}
 	&--grey {
 		background-color: $color-pry;

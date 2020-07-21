@@ -8,14 +8,29 @@
 
 html {
 	font-size: 62.5%;
+	@include resolution(tab-landscape) {
+		font-size: 56.25%;
+	}
+	@include resolution(tab-portrait) {
+		font-size: 50%;
+	}
+	@include resolution(phone) {
+		font-size: 48%;
+	}
+	@include resolution(big-desktop) {
+		font-size: 75%;
+	}
 }
 
 body {
+	box-sizing: border-box;
 	font-family: Lato;
 	font-weight: 400;
 	font-size: 1.6rem;
 	line-height: 1.7;
 	color: #777;
 	padding: 3rem;
-	box-sizing: border-box;
+	@include resolution(tab-portrait) {
+		padding: 0;
+	}
 }

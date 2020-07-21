@@ -9,22 +9,40 @@
 		position: fixed;
 		top: 6rem;
 		right: 6rem;
-		border-radius: 50%;
 		z-index: 2000;
 		text-align: center;
 		box-shadow: 0 1rem 3rem rgba($color-black, 0.1);
+		@include resolution(tab-portrait) {
+			top: 3.5rem;
+			right: 3.5rem;
+		}
+		@include resolution(phone) {
+			height: 5rem;
+			width: 5rem;
+			top: 3rem;
+			right: 3rem;
+		}
 	}
 
 	&__bg {
 		height: 6rem;
 		width: 6rem;
-		border-radius: 50%;
 		position: fixed;
 		top: 6.5rem;
 		right: 6.5rem;
 		background-image: radial-gradient($color-light-grey, $color-black);
 		z-index: 1000;
 		transition: transform 0.8s cubic-bezier(0.86, 0, 0.07, 1);
+		@include resolution(tab-portrait) {
+			top: 3.5rem;
+			right: 3.5rem;
+		}
+		@include resolution(phone) {
+			height: 3rem;
+			width: 3rem;
+			top: 3.5rem;
+			right: 3.5rem;
+		}
 	}
 	&__menu {
 		height: 100vh;
@@ -36,6 +54,7 @@
 		width: 0;
 		transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 	}
+
 	&__list {
 		@include absolute-center;
 		list-style: none;
@@ -83,6 +102,9 @@
 	&__icon {
 		position: relative;
 		margin-top: 3.5rem;
+		@include resolution(phone) {
+			margin-top: 2.5rem;
+		}
 		&,
 		&::before,
 		&::after {
@@ -90,6 +112,9 @@
 			height: 2px;
 			background-color: $color-dark-grey;
 			display: inline-block;
+			@include resolution(phone) {
+				width: 2.5rem;
+			}
 		}
 		&::before,
 		&::after {

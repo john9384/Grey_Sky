@@ -1,9 +1,15 @@
 .row {
 	max-width: $grid-width;
 	margin: 0 auto;
+	@include resolution(tab-portrait) {
+		max-width: 50rem;
+	}
 
 	&:not(:last-child) {
 		margin-bottom: $gutter-vertical;
+		@include resolution(tab-portrait) {
+			margin-bottom: $gutter-vertical-small;
+		}
 	}
 	@include clearfix;
 	[class^="col-"] {
@@ -11,6 +17,14 @@
 
 		&:not(:last-child) {
 			margin-right: $gutter-horizontal;
+			@include resolution(tab-portrait) {
+				margin-right: 0;
+				margin-bottom: $gutter-vertical-small;
+			}
+		}
+		@include resolution(tab-portrait) {
+			width: 100% !important;
+			padding: 5rem;
 		}
 	}
 

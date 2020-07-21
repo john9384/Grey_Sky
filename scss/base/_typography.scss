@@ -2,6 +2,7 @@
 	color: $color-light;
 	text-transform: uppercase;
 	backface-visibility: hidden;
+	text-align: left;
 	&--main {
 		display: block;
 		font-size: 6rem;
@@ -9,6 +10,10 @@
 		letter-spacing: 35px;
 		animation-name: moveInLeft;
 		animation-duration: 1.5s;
+
+		@include resolution(phone) {
+			letter-spacing: 1rem;
+		}
 	}
 	&--sub {
 		display: block;
@@ -18,6 +23,16 @@
 		animation-name: moveInRight;
 		animation-duration: 1.5s;
 		text-align: left;
+		margin-left: 0.5rem;
+		@include resolution(tab-portrait) {
+			margin-left: 2.5rem;
+			letter-spacing: 1rem;
+		}
+		@include resolution(phone) {
+			margin-left: 1.2rem;
+			font-size: 1.5rem;
+			letter-spacing: 0.5rem;
+		}
 	}
 }
 .heading-sec {
@@ -35,7 +50,12 @@
 	background-clip: text;
 	color: transparent;
 	transition: all 0.2s;
-
+	@include resolution(tab-portrait) {
+		font-size: 2.5rem;
+	}
+	@include resolution(phone) {
+		font-size: 2rem;
+	}
 	&:hover {
 		transform: skewY(2deg) skewX(10deg) scale(1.1);
 		text-shadow: $color-text-shadow;
