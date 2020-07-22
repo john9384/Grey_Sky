@@ -6,9 +6,15 @@
 	border-radius: 3px;
 	padding: 6rem;
 	padding-left: 9rem;
-	font-size: $font-size-default;
+	font-size: 1.3rem;
 	transform: skewX(-10deg);
-
+	@include resolution(tap-portrait) {
+		padding: 4rem;
+		padding-left: 7rem;
+	}
+	@include resolution(phone) {
+		transform: skewX(0);
+	}
 	&__avatar {
 		width: 15rem;
 		height: 15rem;
@@ -17,9 +23,15 @@
 		clip-path: circle(50% at 50% 50%);
 		transform: translateX(-3rem) skewX(10deg);
 		position: relative;
+		@include resolution(phone) {
+			transform: translateX(-3rem) skewX(0);
+		}
 	}
 	&__text {
 		transform: skewX(10deg);
+		@include resolution(phone) {
+			transform: skewX(0);
+		}
 	}
 	&__img {
 		width: 100%;

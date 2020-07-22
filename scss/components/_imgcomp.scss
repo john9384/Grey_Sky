@@ -9,18 +9,33 @@
 		position: absolute;
 		transition: all 1s;
 		outline-offset: 2rem;
+		@include resolution(phone) {
+			width: 46%;
+		}
 
 		&--img1 {
 			left: 0;
 			top: -2rem;
+			@include resolution(phone) {
+				width: 44%;
+				top: 0;
+			}
 		}
 		&--img2 {
 			right: 0;
 			top: 2rem;
+			@include resolution(phone) {
+				width: 44%;
+				top: 0;
+			}
 		}
 		&--img3 {
 			left: 20%;
 			top: 10rem;
+			@include resolution(phone) {
+				left: 25%;
+				top: -3rem;
+			}
 		}
 		&:hover {
 			outline: 1.5rem solid $color-pry;

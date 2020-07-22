@@ -60,6 +60,9 @@
 		list-style: none;
 		text-align: center;
 		width: 100%;
+		@include resolution(phone) {
+			margin-top: -10vh;
+		}
 	}
 	&__items {
 		margin: 1rem;

@@ -43,6 +43,12 @@
 	&__group-radio {
 		width: 48%;
 		display: inline-block;
+		@include resolution(phone) {
+			display: block;
+			&:not(:last-child) {
+				margin-bottom: 1rem;
+			}
+		}
 	}
 	&__radio-btn {
 		display: none;

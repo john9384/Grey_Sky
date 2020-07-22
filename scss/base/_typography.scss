@@ -73,5 +73,8 @@
 
 	&:not(:last-child) {
 		margin-bottom: 3rem;
+		@include resolution(phone) {
+			margin-bottom: 1.5rem;
+		}
 	}
 }
