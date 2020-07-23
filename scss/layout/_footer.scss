@@ -3,10 +3,16 @@
 	color: white;
 	padding: 10rem 0;
 	font-size: 1.4rem;
+	@include resolution(tab-portrait) {
+		text-align: center;
+	}
 
 	&__list {
 		font-size: 2rem;
 		text-transform: uppercase;
+		@include resolution(tab-portrait) {
+			list-style: none;
+		}
 	}
 	&__item {
 		&:not(:last-child) {
@@ -34,5 +40,8 @@
 		color: $color-light-grey;
 		width: 80%;
 		float: right;
+		@include resolution(tab-portrait) {
+			width: 100%;
+		}
 	}
 }
